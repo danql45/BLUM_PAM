@@ -32,7 +32,7 @@ import okhttp3.ResponseBody;
 
 public class FileRepository implements IRepository{
 
-    private String JSON_URL = "https://raw.githubusercontent.com/danql45/ProjektPAM/master/products.json";
+    private String JSON_URL = "https://raw.githubusercontent.com/danql45/BLUM_PAM/af0c2209e36b82038c80c2d2c42270eaac9e47bd/products.json";
     private String FILE_NAME = "products.txt";
     private int REQUEST_INTERVAL = 60000;
     private OkHttpClient client;
