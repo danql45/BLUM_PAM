@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    android:background="@drawable/rounded_rect"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/main_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"
+        />
+
+    <TextView
+        android:id="@+id/idLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@id/main_image"
+        app:layout_constraintTop_toTopOf="@id/main_image"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Nr: "/>
+
+    <TextView
+        android:id="@+id/idContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/idLabel"
+        app:layout_constraintTop_toTopOf="@id/main_image"
+        android:textSize="12sp"
+        android:text="placeholder"/>
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/main_image"
+        app:layout_constraintTop_toBottomOf="@id/idLabel"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Nazwa: "/>
+
+    <TextView
+        android:id="@+id/nameContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/nameLabel"
+        app:layout_constraintTop_toTopOf="@id/nameLabel"
+        android:textSize="12sp"
+        android:text="placeholder"/>
+
+    <TextView
+        android:id="@+id/variantsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/main_image"
+        app:layout_constraintTop_toBottomOf="@id/nameLabel"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Warianty: "/>
+
+    <TextView
+        android:id="@+id/variantsContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/variantsLabel"
+        app:layout_constraintTop_toTopOf="@id/variantsLabel"
+        app:layout_constraintBottom_toBottomOf="@id/variantsLabel"
+        android:textSize="12sp"
+        android:text="Nazwa: "/>
+
+
+    <Button
+        android:id="@+id/expandButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/main_image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_image"/>
+
+    <LinearLayout
+        android:id="@+id/childrenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>
